@@ -51,6 +51,9 @@
         .btn:hover {
             background-color: #00332d;
         }
+        .review-buttons {
+            margin: 1rem 0;
+        }
         footer {
             text-align: center;
             padding: 1rem;
@@ -59,6 +62,13 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+        .review-list {
+            margin-top: 2rem;
+        }
+        .review-item {
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 0;
         }
     </style>
 </head>
@@ -81,11 +91,27 @@
         </section>
         <section id="reviews">
             <h2>Latest Reviews</h2>
-            <p>No reviews yet. Be the first to share your experience!</p>
+            <div class="review-list">
+                <div class="review-item">
+                    <h3>Place: Labadi Beach</h3>
+                    <p>Amazing beach with great views and friendly locals!</p>
+                </div>
+                <div class="review-item">
+                    <h3>Product: Adinkra Notebook</h3>
+                    <p>Beautiful design and excellent paper quality. Highly recommend!</p>
+                </div>
+            </div>
+        </section>
+        <section id="add-review">
+            <h2>Post Your Review</h2>
+            <div class="review-buttons">
+                <button class="btn" onclick="alert('Add review for a place')">Review a Place</button>
+                <button class="btn" onclick="alert('Add review for a product')">Review a Product</button>
+            </div>
         </section>
     </main>
     <footer>
-        <p>Copyright  2025 Reviews. All rights reserved.</p>
+        <p>&copy; 2025 Reviews. All rights reserved.</p>
     </footer>
 </body>
 </html>
