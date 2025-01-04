@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Places in Ghana - Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #004d40;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        nav a {
+            color: #004d40;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .place-item {
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 0;
+        }
+        .place-item img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 0.5rem;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #004d40;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #00332d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top Places in Ghana</h1>
+        <p>Explore and share reviews for popular destinations!</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#add-place">Add a Place</a>
+    </nav>
+    <main>
+        <h2>Ranked Places</h2>
+        <div class="place-item">
+            <h3>Labadi Beach</h3>
+            <p>Star Rating: ★★★★☆ (4.5)</p>
+            <p>Beautiful beach with great views and friendly locals.</p>
+            <img src="images/labadi_beach.jpg" alt="Labadi Beach">
+            <a href="#upload-review" class="btn">Upload Review</a>
+        </div>
+        <div class="place-item">
+            <h3>Kwame Nkrumah Mausoleum</h3>
+            <p>Star Rating: ★★★★☆ (4.2)</p>
+            <p>A must-visit historic site in Accra.</p>
+            <img src="images/kwame_mausoleum.jpg" alt="Kwame Nkrumah Mausoleum">
+            <a href="#upload-review" class="btn">Upload Review</a>
+        </div>
+        <!-- More places can be added here -->
+        <section id="add-place">
+            <h2>Add a New Place</h2>
+            <form>
+                <label for="place-name">Place Name:</label><br>
+                <input type="text" id="place-name" name="place-name" required><br><br>
+                <label for="place-image">Upload Image:</label><br>
+                <input type="file" id="place-image" name="place-image" accept="image/*"><br><br>
+                <label for="review-text">Review:</label><br>
+                <textarea id="review-text" name="review-text" rows="5" required></textarea><br><br>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
