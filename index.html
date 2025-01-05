@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RateGhana - Share Your Experiences</title>
+    <link rel="icon" href="logo.png" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,6 +18,12 @@
             color: white;
             padding: 1rem;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            height: 50px;
         }
         nav {
             display: flex;
@@ -51,9 +58,6 @@
         .btn:hover {
             background-color: #00332d;
         }
-        .review-buttons {
-            margin: 1rem 0;
-        }
         footer {
             text-align: center;
             padding: 1rem;
@@ -63,39 +67,54 @@
             bottom: 0;
             width: 100%;
         }
-        .review-list {
-            margin-top: 2rem;
+        .form-container {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .review-item {
-            border-bottom: 1px solid #ddd;
-            padding: 1rem 0;
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 1rem;
         }
-        .rank-section {
-            margin: 2rem 0;
+        form input, form select, form textarea, form button {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
         }
-        .rank-section h2 {
-            margin-bottom: 1rem;
+        form button {
+            background-color: #004d40;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
-        .rank-section ul {
-            list-style: none;
-            padding: 0;
+        form button:hover {
+            background-color: #00332d;
         }
-        .rank-section li {
-            margin: 0.5rem 0;
-        }
-        .rank-section a {
-            color: #004d40;
-            text-decoration: none;
-        }
-        .rank-section a:hover {
-            text-decoration: underline;
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            main {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="rategh.png" alt="RateGhana Logo" width="175px" height="90px">
         <h1>Welcome to RateGhana</h1>
-        <p>Your trusted platform for sharing experiences in Ghana</p>
     </header>
     <nav>
         <a href="#">Home</a>
@@ -108,21 +127,6 @@
             <h2>About Us</h2>
             <p>RateGhana is a user-driven platform where you can share and read reviews about places, products, and services in Ghana. Whether it’s a restaurant, a tourist destination, or a gadget, your opinion matters.</p>
             <a class="btn" href="#add-review">Post a Review</a>
-        </section>
-        <section id="rankings" class="rank-section">
-            <h2>Top Rated</h2>
-            <h3>Places</h3>
-            <ul>
-                <li><a href="places.html">View Places</a></li>
-            </ul>
-            <h3>Products</h3>
-            <ul>
-                <li><a href="products.html">View Products</a></li>
-            </ul>
-            <h3>Services</h3>
-            <ul>
-                <li><a href="services.html">View Services</a></li>
-            </ul>
         </section>
         <section id="reviews">
             <h2>Latest Reviews</h2>
@@ -139,28 +143,30 @@
         </section>
         <section id="add-review">
             <h2>Post Your Review</h2>
-            <form id="review-form" enctype="multipart/form-data" action="http://localhost:5000/reviews" method="POST">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+            <div class="form-container">
+                <form id="review-form" enctype="multipart/form-data" action="http://localhost:5000/reviews" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-                <label for="type">Type (place, product, service):</label><br>
-                <select id="type" name="type" required>
-                    <option value="place">Place</option>
-                    <option value="product">Product</option>
-                    <option value="service">Service</option>
-                </select><br><br>
+                    <label for="type">Type (place, product, service):</label>
+                    <select id="type" name="type" required>
+                        <option value="place">Place</option>
+                        <option value="product">Product</option>
+                        <option value="service">Service</option>
+                    </select>
 
-                <label for="reviewText">Your Review:</label><br>
-                <textarea id="reviewText" name="reviewText" rows="5" placeholder="Write your review here" required></textarea><br><br>
+                    <label for="reviewText">Your Review:</label>
+                    <textarea id="reviewText" name="reviewText" rows="5" placeholder="Write your review here" required></textarea>
 
-                <label for="rating">Rating (1-5):</label><br>
-                <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+                    <label for="rating">Rating (1-5):</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
 
-                <label for="image">Upload an Image (optional):</label><br>
-                <input type="file" id="image" name="image" accept="image/*"><br><br>
+                    <label for="image">Upload an Image (optional):</label>
+                    <input type="file" id="image" name="image" accept="image/*">
 
-                <button type="submit" class="btn">Submit Review</button>
-            </form>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer>

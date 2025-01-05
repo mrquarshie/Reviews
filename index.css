@@ -1,0 +1,104 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+header {
+    background-color: #004d40;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header img {
+    height: 50px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #00796b;
+    padding: 0.5rem 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #00332d;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #004d40;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.form-container {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 1rem;
+}
+form input, form select, form textarea, form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+form button {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #00332d;
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    main {
+        padding: 1rem;
+    }
+}
