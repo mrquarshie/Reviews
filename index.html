@@ -20,10 +20,7 @@
             text-align: center;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-        }
-        header img {
-            height: 50px;
+            justify-content: center;
         }
         nav {
             display: flex;
@@ -54,6 +51,7 @@
             border-radius: 5px;
             text-decoration: none;
             cursor: pointer;
+            margin: 0.5rem 0;
         }
         .btn:hover {
             background-color: #00332d;
@@ -66,35 +64,6 @@
             position: relative;
             bottom: 0;
             width: 100%;
-        }
-        .form-container {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        form label {
-            font-weight: bold;
-            display: block;
-            margin-top: 1rem;
-        }
-        form input, form select, form textarea, form button {
-            width: 100%;
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        form button {
-            background-color: #004d40;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        form button:hover {
-            background-color: #00332d;
         }
         @media (max-width: 600px) {
             header {
@@ -113,7 +82,7 @@
 </head>
 <body>
     <header>
-                <h1>Welcome to RateGhana</h1>
+        <h1>Welcome to RateGhana</h1>
     </header>
     <nav>
         <a href="#">Home</a>
@@ -128,49 +97,14 @@
             <a class="btn" href="#add-review">Post a Review</a>
         </section>
         <section id="reviews">
-            <h2>Latest Reviews</h2>
-            <div class="review-list">
-                <div class="review-item">
-                    <h3>Place: Labadi Beach</h3>
-                    <p>Amazing beach with great views and friendly locals!</p>
-                </div>
-                <div class="review-item">
-                    <h3>Product: Adinkra Notebook</h3>
-                    <p>Beautiful design and excellent paper quality. Highly recommend!</p>
-                </div>
-            </div>
-        </section>
-        <section id="add-review">
-            <h2>Post Your Review</h2>
-            <div class="form-container">
-                <form id="review-form" enctype="multipart/form-data" action="http://localhost:5000/reviews" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-                    <label for="type">Type (place, product, service):</label>
-                    <select id="type" name="type" required>
-                        <option value="place">Place</option>
-                        <option value="product">Product</option>
-                        <option value="service">Service</option>
-                    </select>
-
-                    <label for="reviewText">Your Review:</label>
-                    <textarea id="reviewText" name="reviewText" rows="5" placeholder="Write your review here" required></textarea>
-
-                    <label for="rating">Rating (1-5):</label>
-                    <input type="number" id="rating" name="rating" min="1" max="5" required>
-
-                    <label for="image">Upload an Image (optional):</label>
-                    <input type="file" id="image" name="image" accept="image/*">
-
-                    <button type="submit">Submit Review</button>
-                </form>
-            </div>
+            <h2>Explore Reviews</h2>
+            <a class="btn" href="places.html">View Places</a>
+            <a class="btn" href="products.html">View Products</a>
+            <a class="btn" href="services.html">View Services</a>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 RateGhana. All rights reserved.</p>
-        <p>creator: Emmanuel Quarshie</p>
     </footer>
 </body>
 </html>
