@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RateGhana - Share Your Experiences</title>
+    <title>Products - RateGhana</title>
     <link rel="icon" href="logo.png" type="image/png">
     <style>
         body {
@@ -25,6 +25,7 @@
         header h1 {
             font-size: 1.5rem;
             margin: 0;
+            color: #007f00; /* Green color */
         }
         nav {
             display: flex;
@@ -35,7 +36,7 @@
             border-bottom: 1px solid #e0e0e0;
         }
         nav a {
-            color: #007aff;
+            color: #007f00; /* Green color */
             text-decoration: none;
             font-weight: 500;
             padding: 0.5rem 1rem;
@@ -43,7 +44,7 @@
             transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
-            background-color: #007aff;
+            background-color: #007f00; /* Green color */
             color: white;
         }
         main {
@@ -51,56 +52,47 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        .search-bar {
-            margin: 2rem auto;
-            max-width: 600px;
-            position: relative;
+        .review-form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
         }
-        .search-bar input[type="text"] {
+        .review-form h2 {
+            margin-top: 0;
+        }
+        .review-form input, .review-form textarea, .review-form button {
             width: 100%;
-            padding: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 30px;
-            font-size: 1rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            outline: none;
-            transition: border-color 0.3s;
-        }
-        .search-bar input[type="text"]:focus {
-            border-color: #007aff;
-        }
-        .search-bar button {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #007aff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 0.5rem 0.75rem;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-        .search-bar button:hover {
-            background-color: #005bb5;
-        }
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: #007aff;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            text-decoration: none;
-            cursor: pointer;
+            padding: 0.75rem;
             margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .review-form button {
+            background-color: #007f00; /* Green color */
+            color: white;
+            border: none;
+            cursor: pointer;
             font-size: 1rem;
             transition: background-color 0.3s;
         }
-        .btn:hover {
-            background-color: #005bb5;
+        .review-form button:hover {
+            background-color: #005700; /* Darker green */
+        }
+        .reviews {
+            margin-top: 2rem;
+        }
+        .reviews h2 {
+            margin-top: 0;
+        }
+        .review {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
         }
         footer {
             text-align: center;
@@ -109,42 +101,25 @@
             color: #333;
             border-top: 1px solid #ccc;
         }
-        section {
-            margin-bottom: 2rem;
-        }
-        .logo {
-            margin-right: auto;
-        }
+
+        /* Responsive Styles */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
-                align-items: center;
-                gap: 0.75rem;
-            }
-            main {
+                gap: 0.5rem;
                 padding: 1rem;
             }
-            .btn {
-                width: 100%;
-                padding: 0.75rem;
+            .review-form, .reviews {
+                padding: 1rem;
             }
         }
         @media (max-width: 480px) {
             header {
                 flex-direction: column;
-                padding: 1rem;
                 text-align: center;
             }
-            header h1 {
-                font-size: 1.2rem;
-            }
-            nav {
-                gap: 0.5rem;
-                padding: 0.5rem 0;
-            }
-            .btn {
-                font-size: 0.9rem;
-                padding: 0.5rem 1rem;
+            main {
+                padding: 1rem;
             }
         }
     </style>
@@ -154,27 +129,32 @@
         <h1 class="logo">RateGhana</h1>
     </header>
     <nav>
-        <a href="#">Home</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#add-review">Add Review</a>
-        <a href="#contact">Contact Us</a>
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
     </nav>
     <main>
-        <div class="search-bar">
-            <input type="text" placeholder="Search for places, products, or services...">
-            <button>&#128269;</button>
+        <h2>Products in Ghana</h2>
+        <div class="reviews">
+            <h2>Posted Reviews</h2>
+            <div class="review">
+                <h3>Smartphone</h3>
+                <p>Amazing performance and great battery life. Totally worth the price!</p>
+            </div>
+            <div class="review">
+                <h3>Blender</h3>
+                <p>Very efficient and easy to use. Perfect for making smoothies and soups.</p>
+            </div>
         </div>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>RateGhana is a user-driven platform where you can share and read reviews about places, products, and services in Ghana. Whether it’s a restaurant, a tourist destination, or a gadget, your opinion matters.</p>
-            <a class="btn" href="#add-review">Post a Review</a>
-        </section>
-        <section id="reviews">
-            <h2>Explore Reviews</h2>
-            <a class="btn" href="places.html">View Places</a>
-            <a class="btn" href="products.html">View Products</a>
-            <a class="btn" href="services.html">View Services</a>
-        </section>
+        <div class="review-form">
+            <h2>Post Your Review</h2>
+            <form>
+                <input type="text" placeholder="Product Name" required>
+                <textarea placeholder="Your Review" rows="5" required></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 RateGhana. All rights reserved.</p>
