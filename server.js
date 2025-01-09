@@ -57,9 +57,9 @@ app.get("/reviews", (req, res) => {
     },
     {
       id: 2,
-      name: "Adinkra Notebook",
+      name: "Frutelli",
       type: "product",
-      reviewText: "Great design and quality.",
+      reviewText: "Great taste .",
       rating: 4.0,
       imagePath: null,
     },
