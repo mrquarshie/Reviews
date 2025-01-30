@@ -21,6 +21,7 @@ header img {
 
 #bio{
     font-size: small;
+    font-weight: 100;
 }
 nav {
     display: flex;
