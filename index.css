@@ -18,6 +18,10 @@ header {
 header img {
     height: 50px;
 }
+
+#bio{
+    font-size: small;
+}
 nav {
     display: flex;
     justify-content: center;
