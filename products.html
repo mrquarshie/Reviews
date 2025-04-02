@@ -3,139 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - RateGhana</title>
-    <link rel="icon" href="logo.png" type="image/png">
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #fff;
-            color: #333;
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            background-color: #f9f9f9;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        nav a {
-            color: #007aff;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #007aff;
-            color: white;
-        }
-        main {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .review-form {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
-        }
-        .review-form h2 {
-            margin-top: 0;
-        }
-        .review-form input, .review-form textarea, .review-form button {
-            width: 100%;
-            padding: 0.75rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        .review-form button {
-            background-color: #007aff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-        .review-form button:hover {
-            background-color: #005bb5;
-        }
-        .reviews {
-            margin-top: 2rem;
-        }
-        .reviews h2 {
-            margin-top: 0;
-        }
-        .review {
-            background: #fff;
-            padding: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1rem;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #f1f1f1;
-            color: #333;
-            border-top: 1px solid #ccc;
-        }
-    </style>
+    <title>Ghanaian Products | RateGhana</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="categories.css">
 </head>
 <body>
     <header>
-        <h1 class="logo">RateGhana</h1>
+        <div class="container header-container">
+            <a href="index.html" class="logo">RateGhana<span class="logo-bio">your guide to all things Ghana</span></a>
+            <div class="auth-links">
+                <a href="/login">Log In</a>
+                <a href="/signup">Sign Up</a>
+            </div>
+        </div>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="places.html">Places</a>
-        <a href="products.html">Products</a>
-        <a href="services.html">Services</a>
+    
+    <nav class="main-nav">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="places.html">Places</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="services.html">Services</a>
+            <a href="food.html">Food</a>
+            <a href="events.html">Events</a>
+        </div>
     </nav>
-    <main>
-        <h2>Products in Ghana</h2>
-        <div class="reviews">
-            <h2>Posted Reviews</h2>
-            <div class="review">
-                <h3>Smartphone</h3>
-                <p>Amazing performance and great battery life. Totally worth the price!</p>
-            </div>
-            <div class="review">
-                <h3>Blender</h3>
-                <p>Very efficient and easy to use. Perfect for making smoothies and soups.</p>
+    
+    <section class="category-hero">
+        <div class="container">
+            <h1>Ghanaian Products</h1>
+            <p>Discover authentic Ghanaian products and share your reviews</p>
+        </div>
+    </section>
+    
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <div class="item-image" style="background-image: url('images/kente.jpg');"></div>
+                    <div class="item-content">
+                        <h3 class="item-title">Kente Cloth</h3>
+                        <p class="item-location">Bonwire, Ashanti Region</p>
+                        <div class="rating">★★★★★ (142 reviews)</div>
+                        <p class="item-description">Handwoven traditional Ghanaian textile with vibrant patterns. Each design has its own meaning and history.</p>
+                        <a href="product-detail.html" class="button">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-image" style="background-image: url('images/shea.jpg');"></div>
+                    <div class="item-content">
+                        <h3 class="item-title">Shea Butter</h3>
+                        <p class="item-location">Northern Region</p>
+                        <div class="rating">★★★★☆ (98 reviews)</div>
+                        <p class="item-description">Pure, unrefined shea butter made using traditional methods. Excellent for skin and hair care.</p>
+                        <a href="product-detail.html" class="button">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-image" style="background-image: url('images/adinkra.jpg');"></div>
+                    <div class="item-content">
+                        <h3 class="item-title">Adinkra Symbols</h3>
+                        <p class="item-location">Kumasi, Ashanti Region</p>
+                        <div class="rating">★★★★☆ (76 reviews)</div>
+                        <p class="item-description">Traditional symbols printed on fabric, each representing a concept or proverb from Ghanaian culture.</p>
+                        <a href="product-detail.html" class="button">View Details</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="review-form">
-            <h2>Post Your Review</h2>
-            <form>
-                <input type="text" placeholder="Product Name" required>
-                <textarea placeholder="Your Review" rows="5" required></textarea>
-                <button type="submit">Submit Review</button>
-            </form>
-        </div>
-    </main>
+    </section>
+    
     <footer>
-        <p>&copy; 2025 RateGhana. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/about">About Us</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+            </div>
+            <p>&copy; 2025 RateGhana. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

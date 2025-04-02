@@ -1,0 +1,217 @@
+/* Base Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #007f00;
+    text-decoration: none;
+}
+
+.logo-bio {
+    font-size: 1.1rem;
+    color: #333;
+    margin-left: 0.5rem;
+}
+
+.auth-links a {
+    color: #007f00;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f1f1f1;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.main-nav a {
+    color: #007f00;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: #007f00;
+    color: white;
+}
+
+/* Category Hero */
+.category-hero {
+    background-color: #007f00;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 127, 0, 0.8), rgba(0, 127, 0, 0.9));
+    background-size: cover;
+    background-position: center;
+}
+
+.category-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Content Section */
+.content-section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #007f00;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Item Cards */
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.item-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.item-image {
+    height: 200px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+}
+
+.item-content {
+    padding: 1.5rem;
+}
+
+.item-title {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0;
+    color: #007f00;
+}
+
+.item-location {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.item-description {
+    margin-bottom: 1.5rem;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .auth-links {
+        margin-top: 1rem;
+    }
+    
+    .main-nav {
+        flex-wrap: wrap;
+        padding: 0.5rem;
+    }
+    
+    .item-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .category-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .item-grid {
+        grid-template-columns: 1fr;
+    }
+}

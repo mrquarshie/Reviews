@@ -3,139 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Places - RateGhana</title>
-    <link rel="icon" href="logo.png" type="image/png">
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #fff;
-            color: #333;
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            background-color: #f9f9f9;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        nav a {
-            color: #007aff;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #007aff;
-            color: white;
-        }
-        main {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .review-form {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
-        }
-        .review-form h2 {
-            margin-top: 0;
-        }
-        .review-form input, .review-form textarea, .review-form button {
-            width: 100%;
-            padding: 0.75rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        .review-form button {
-            background-color: #007aff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-        .review-form button:hover {
-            background-color: #005bb5;
-        }
-        .reviews {
-            margin-top: 2rem;
-        }
-        .reviews h2 {
-            margin-top: 0;
-        }
-        .review {
-            background: #fff;
-            padding: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1rem;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #f1f1f1;
-            color: #333;
-            border-top: 1px solid #ccc;
-        }
-    </style>
+    <title>Places in Ghana | RateGhana</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="categories.css">
 </head>
 <body>
     <header>
-        <h1 class="logo">RateGhana</h1>
+        <div class="container header-container">
+            <a href="index.html" class="logo">RateGhana<span class="logo-bio">your guide to all things Ghana</span></a>
+            <div class="auth-links">
+                <a href="/login">Log In</a>
+                <a href="/signup">Sign Up</a>
+            </div>
+        </div>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="places.html">Places</a>
-        <a href="products.html">Products</a>
-        <a href="services.html">Services</a>
+    
+    <nav class="main-nav">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="places.html" class="active">Places</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="food.html">Food</a>
+            <a href="events.html">Events</a>
+        </div>
     </nav>
-    <main>
-        <h2>Places in Ghana</h2>
-        <div class="reviews">
-            <h2>Posted Reviews</h2>
-            <div class="review">
-                <h3>Beautiful Beach</h3>
-                <p>Amazing scenery and relaxing atmosphere. Definitely worth visiting!</p>
-            </div>
-            <div class="review">
-                <h3>Historic Site</h3>
-                <p>A great place to learn about Ghanaian history and culture. Well-maintained and informative.</p>
+    
+    <section class="category-hero">
+        <div class="container">
+            <h1>Places in Ghana</h1>
+            <p>Discover and review the best locations across Ghana - from bustling markets to serene tourist sites</p>
+        </div>
+    </section>
+    
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Featured Places</h2>
+            <div class="item-grid">
+                <div class="item-card">
+                    <div class="item-image" style="background-image: url('images/osu-market.jpg');"></div>
+                    <div class="item-content">
+                        <h3 class="item-title">Osu Night Market</h3>
+                        <p class="item-location">Accra, Greater Accra</p>
+                        <div class="rating">★★★★☆ (124 reviews)</div>
+                        <p class="item-description">Vibrant night market offering local foods, crafts, and clothing. Famous for its kelewele and grilled tilapia.</p>
+                        <a href="place-detail.html" class="button">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-image" style="background-image: url('images/kakum.jpg');"></div>
+                    <div class="item-content">
+                        <h3 class="item-title">Kakum National Park</h3>
+                        <p class="item-location">Cape Coast, Central Region</p>
+                        <div class="rating">★★★★★ (89 reviews)</div>
+                        <p class="item-description">Lush rainforest with a famous canopy walkway. Home to diverse wildlife including forest elephants.</p>
+                        <a href="place-detail.html" class="button">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-image" style="background-image: url('images/mole.jpg');"></div>
+                    <div class="item-content">
+                        <h3 class="item-title">Mole National Park</h3>
+                        <p class="item-location">Northern Region</p>
+                        <div class="rating">★★★★☆ (67 reviews)</div>
+                        <p class="item-description">Ghana's largest wildlife refuge with elephants, antelopes, and over 300 bird species.</p>
+                        <a href="place-detail.html" class="button">View Details</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="review-form">
-            <h2>Post Your Review</h2>
-            <form>
-                <input type="text" placeholder="Place Name" required>
-                <textarea placeholder="Your Review" rows="5" required></textarea>
-                <button type="submit">Submit Review</button>
-            </form>
-        </div>
-    </main>
+    </section>
+    
     <footer>
-        <p>&copy; 2025 RateGhana. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/about">About Us</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+            </div>
+            <p>&copy; 2025 RateGhana. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
