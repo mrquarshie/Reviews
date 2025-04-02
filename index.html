@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - RateGhana</title>
+    <title>RateGhana - Your Guide to All Things Ghana</title>
     <link rel="icon" href="logo.png" type="image/png">
-    <link rel="stylesheets" href="index.css">
     <style>
+        /* Base Styles */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
@@ -15,151 +15,377 @@
             color: #333;
             line-height: 1.6;
         }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
         header {
             background-color: #fff;
-            color: #333;
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
+            padding: 1rem 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        header h1 {
-            font-size: 1.5rem;
-            margin: 0;
-            color: #007f00; 
-            border-radius: 25px;
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        nav {
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #007f00;
+            text-decoration: none;
+        }
+        
+        .logo-bio {
+            font-size: 1.1rem;
+            color: #333;
+            margin-left: 0.5rem;
+        }
+        
+        .auth-links a {
+            color: #007f00;
+            text-decoration: none;
+            margin-left: 1rem;
+            font-weight: 500;
+        }
+        
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Main Navigation */
+        .main-nav {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            background-color: #f9f9f9;
+            background-color: #f1f1f1;
             padding: 0.75rem 0;
             border-bottom: 1px solid #e0e0e0;
         }
-        nav a {
-            color: #007f00; /* Green color */
+        
+        .main-nav a {
+            color: #007f00;
             text-decoration: none;
             font-weight: 500;
             padding: 0.5rem 1rem;
             border-radius: 20px;
             transition: background-color 0.3s, color 0.3s;
         }
-        nav a:hover {
-            background-color: #007f00; /* Green color */
+        
+        .main-nav a:hover {
+            background-color: #007f00;
             color: white;
         }
-        main {
-            padding: 2rem;
-            max-width: 1200px;
+        
+        /* Hero Search Section */
+        .hero {
+            background-color: #007f00;
+            padding: 3rem 0;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(0, 127, 0, 0.8), rgba(0, 127, 0, 0.9)), url('ghana-pattern.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .search-container {
+            max-width: 700px;
             margin: 0 auto;
         }
-        .review-form {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 2rem;
+        
+        .search-form {
+            display: flex;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .review-form h2 {
-            margin-top: 0;
-        }
-        .review-form input, .review-form textarea, .review-form button {
-            width: 100%;
-            padding: 0.75rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        
+        .search-input {
+            flex: 1;
+            padding: 15px;
+            border: none;
             font-size: 1rem;
         }
-        .review-form button {
-            background-color: #007f00; /* Green color */
+        
+        .search-input:first-child {
+            border-right: 1px solid #ddd;
+        }
+        
+        .search-button {
+            background-color: #333;
             color: white;
             border: none;
-            cursor: pointer;
+            padding: 0 25px;
             font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
             transition: background-color 0.3s;
         }
-        .review-form button:hover {
-            background-color: #005700; /* Darker green */
+        
+        .search-button:hover {
+            background-color: #555;
         }
-        .reviews {
-            margin-top: 2rem;
+        
+        /* Categories Navigation */
+        .categories {
+            padding: 2.5rem 0;
+            background-color: #fff;
         }
-        .reviews h2 {
-            margin-top: 0;
-        }
-        .review {
-            background: #fff;
-            padding: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1rem;
-        }
-        footer {
+        
+        .categories h2 {
             text-align: center;
-            padding: 1rem;
-            background-color: #f1f1f1;
-            color: #333;
-            border-top: 1px solid #ccc;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            color: #007f00;
         }
-
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 1rem;
+        }
+        
+        .category-item {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .category-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #f0f0f0;
+        }
+        
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            color: #007f00;
+        }
+        
+        .category-name {
+            font-weight: 500;
+        }
+        
+        /* Recent Reviews Section */
+        .recent-reviews {
+            padding: 2.5rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #007f00;
+            text-align: center;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .review-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .review-card h3 {
+            margin-top: 0;
+            color: #007f00;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
         /* Responsive Styles */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 0.5rem;
-                padding: 1rem;
-            }
-            .review-form, .reviews {
-                padding: 1rem;
-            }
-        }
-        @media (max-width: 480px) {
-            header {
+            .header-container {
                 flex-direction: column;
                 text-align: center;
             }
-            main {
-                padding: 1rem;
+            
+            .auth-links {
+                margin-top: 1rem;
+            }
+            
+            .main-nav {
+                flex-wrap: wrap;
+                padding: 0.5rem;
+            }
+            
+            .search-form {
+                flex-direction: column;
+            }
+            
+            .search-input:first-child {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+            
+            .category-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 class="logo">RateGhana,<span id="bio" style="font-size: 20px; color: #333;"  > your guide to all things Ghana</span></h1>
+        <div class="container header-container">
+            <a href="index.html" class="logo">RateGhana<span class="logo-bio">your guide to all things Ghana</span></a>
+            <div class="auth-links">
+                <a href="/login">Log In</a>
+                <a href="/signup">Sign Up</a>
+            </div>
+        </div>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="places.html">Places</a>
-        <a href="products.html">Products</a>
-        <a href="services.html">Services</a>
+    
+    <nav class="main-nav">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="places.html">Places</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="food.html">Food</a>
+            <a href="events.html">Events</a>
+        </div>
     </nav>
-    <main>
-        <h2>Products in Ghana</h2>
-        <div class="reviews">
-            <h2>Posted Reviews</h2>
-            <div class="review">
-                <h3>Smartphone</h3>
-                <p>Amazing performance and great battery life. Totally worth the price!</p>
-            </div>
-            <div class="review">
-                <h3>Blender</h3>
-                <p>Very efficient and easy to use. Perfect for making smoothies and soups.</p>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Discover & Share Reviews of Ghanaian Businesses</h1>
+            <div class="search-container">
+                <form class="search-form" action="/search" method="GET">
+                    <input type="text" class="search-input" placeholder="What are you looking for? (restaurants, shops, etc.)" name="q">
+                    <input type="text" class="search-input" placeholder="Where in Ghana? (Accra, Kumasi, etc.)" name="location">
+                    <button type="submit" class="search-button">Search</button>
+                </form>
             </div>
         </div>
-        <div class="review-form">
-            <h2>Post Your Review</h2>
-            <form>
-                <input type="text" placeholder="Product Name" required>
-                <textarea placeholder="Your Review" rows="5" required></textarea>
-                <button type="submit">Submit Review</button>
-            </form>
+    </section>
+    
+    <section class="categories">
+        <div class="container">
+            <h2>Popular Categories</h2>
+            <div class="category-grid">
+                <a href="restaurants.html" class="category-item">
+                    <div class="category-icon">🍴</div>
+                    <div class="category-name">Restaurants</div>
+                </a>
+                <a href="markets.html" class="category-item">
+                    <div class="category-icon">🛒</div>
+                    <div class="category-name">Local Markets</div>
+                </a>
+                <a href="products.html" class="category-item">
+                    <div class="category-icon">📦</div>
+                    <div class="category-name">Ghanaian Products</div>
+                </a>
+                <a href="hotels.html" class="category-item">
+                    <div class="category-icon">🏨</div>
+                    <div class="category-name">Hotels</div>
+                </a>
+                <a href="tourism.html" class="category-item">
+                    <div class="category-icon">🌴</div>
+                    <div class="category-name">Tourist Sites</div>
+                </a>
+                <a href="services.html" class="category-item">
+                    <div class="category-icon">🔧</div>
+                    <div class="category-name">Services</div>
+                </a>
+                <a href="transport.html" class="category-item">
+                    <div class="category-icon">🚕</div>
+                    <div class="category-name">Transport</div>
+                </a>
+                <a href="more.html" class="category-item">
+                    <div class="category-icon">⋯</div>
+                    <div class="category-name">More Categories</div>
+                </a>
+            </div>
         </div>
-    </main>
+    </section>
+    
+    <section class="recent-reviews">
+        <div class="container">
+            <h2 class="section-title">Recently Reviewed in Ghana</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <h3>Osu Night Market</h3>
+                    <p>"Amazing variety of local foods and crafts. The kelewele here is the best in Accra!"</p>
+                    <div class="rating">★★★★☆</div>
+                </div>
+                <div class="review-card">
+                    <h3>Kente Cloth</h3>
+                    <p>"Authentic and beautifully woven. Perfect gift to take back home."</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+                <div class="review-card">
+                    <h3>Labadi Beach Hotel</h3>
+                    <p>"Excellent service with a beautiful beachfront view. Highly recommended!"</p>
+                    <div class="rating">★★★★☆</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer>
-        <p>&copy; 2025  Emmanuel Quarshie RateGhana. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/about">About Us</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+            </div>
+            <p>&copy; 2025 RateGhana. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
